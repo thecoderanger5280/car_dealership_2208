@@ -30,4 +30,12 @@ class Dealership
       car.make == car_make
     end
   end
+
+  def average_price_of_car
+    average = 0
+    @inventory.each do |car|
+      average += car.total_cost
+    end
+    average /= @inventory.length
+  end
 end
