@@ -18,4 +18,10 @@ class Dealership
   def has_inventory?
     @inventory_count != 0
   end
+
+  def cars_by_make(car_make)
+    @inventory.find_all do |car|
+      car.make == car_make
+    end
+  end
 end
