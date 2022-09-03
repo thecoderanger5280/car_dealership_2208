@@ -38,4 +38,17 @@ class Dealership
     end
     average /= @inventory.length
   end
+
+  def cars_sorted_by_price
+    @inventory.sort_by {|car| car.total_cost}
+  end
+
+  # def inventory_hash
+  #   inventory_h = @inventory.sort_by {|car| car.make}
+  #   count = 0
+  #   fords = @inventory.find_all {|car| car.make == "Ford"}
+  #   toyotas = @inventory.find_all {|car| car.make == "Toyota"}
+  #   chevrolets = @inventory.find_all {|car| car.make == "Chevrolet"}
+  #   {"Ford" => fords, "Toyota" => toyotas, "Chevrolet" => chevrolets}
+  # end
 end
